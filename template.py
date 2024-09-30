@@ -4,7 +4,7 @@ import logging
 
 logging.basicConfig(level=logging.INFO)
 
-project_name="ML_Project"
+project_name="f"
 
 list_of_files=[
     f"src/__init__.py",
@@ -23,7 +23,8 @@ list_of_files=[
     "app.py",
     "Dockerfile",
     "requirements.txt",
-    "setup.py"
+    "setup.py",
+    f"Notebooks/init.py",
 ]
 
 for filepath in list_of_files:
@@ -39,7 +40,6 @@ for filepath in list_of_files:
         with open(filepath,'w') as f:
             pass
             logging.info(f"Creating empty file: {filepath}")
-
 
     else:
         logging.info(f"{filename} is already exists")
