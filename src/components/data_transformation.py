@@ -7,6 +7,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from dataclasses import dataclass
 from src.components.data_ingestion import DataIngestion
+from src.utils import save_obj
 
 
 @dataclass
@@ -60,8 +61,7 @@ class DataTransformation:
             train_arr = preprocessor.fit_transform(train_df)
             test_arr = preprocessor.transform(test_df)
 
-            with open(self.preprocessed_obj_path, "wb") as file_obj:
-                pickle.dump(preprocessor, file_obj)
+            save_obj(preprocessor, self.preprocessed_obj_path)
 
             logging.info("Data Transformation Succesfully Terminated")
             return (train_arr, target_train, test_arr, target_test, self.preprocessed_obj_path)
