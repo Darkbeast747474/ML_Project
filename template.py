@@ -24,7 +24,7 @@ list_of_files=[
     "Dockerfile",
     "requirements.txt",
     "setup.py",
-    f"Notebooks/init.py",
+    f"Notebooks/Loan_prediction.ipynb",
 ]
 
 for filepath in list_of_files:
