@@ -7,9 +7,9 @@ from dataclasses import dataclass
 
 @dataclass
 class DataIngestion:
-    train_data_path: str = os.path.join("artifacts", "train.csv")
-    test_data_path: str = os.path.join("artifacts", "test.csv")
-    raw_data_path: str = os.path.join("artifacts", "data.csv")
+    train_data_path: str = os.path.join("artifacts/Data", "train.csv")
+    test_data_path: str = os.path.join("artifacts/Data", "test.csv")
+    raw_data_path: str = os.path.join("artifacts/Data", "data.csv")
 
     def initiate_data_ingestion(self):
         logging.info("Data Ingestion Initiated")
@@ -35,4 +35,5 @@ class DataIngestion:
         except Exception as e:
             logging.info(e)
             raise CustomException(e, sys)
+                
 
