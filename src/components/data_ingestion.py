@@ -15,7 +15,7 @@ class DataIngestion:
         logging.info("Data Ingestion Initiated")
         try:
             df = pandas.read_csv("Notebooks/Training Data.csv")
-            logging.info("Dataset read as Pandas Dataframe")
+            logging.info("Dataset Fetched as Pandas Dataframe")
 
             os.makedirs(os.path.dirname(self.train_data_path),exist_ok=True)
             df.to_csv(self.raw_data_path, index=False, header=True)
