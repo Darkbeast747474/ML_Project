@@ -8,6 +8,7 @@ from sklearn.compose import ColumnTransformer
 from dataclasses import dataclass
 from src.components.data_ingestion import DataIngestion
 from src.utils import save_obj
+from src.components.model_tranier import ModelTrainer
 
 
 @dataclass

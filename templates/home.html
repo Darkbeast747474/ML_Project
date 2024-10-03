@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Collection Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h2>Data Collection Form</h2>
+
+    <form id="dataForm" action="/predict" method="POST">
+        <!-- Numerical Columns -->
+        <label for="Income">Income:</label>
+        <input type="number" id="Income" name="Income" required>
+
+        <label for="Age">Age:</label>
+        <input type="number" id="Age" name="Age" required>
+
+        <label for="CURRENT_HOUSE_YRS">Current House Years:</label>
+        <input type="number" id="CURRENT_HOUSE_YRS" name="CURRENT_HOUSE_YRS" required>
+
+        <label for="Experience">Experience (Years):</label>
+        <input type="number" id="Experience" name="Experience" required>
+
+        <!-- Categorical Columns -->
+        <label for="House_Ownership">House Ownership:</label>
+        <select id="House_Ownership" name="House_Ownership" required>
+            <option value="">--Select Ownership--</option>
+            <option value="Owned">owned</option>
+            <option value="Rented">rented</option>
+        </select>
+
+        <label for="Car_Ownership">Car Ownership:</label>
+        <select id="Car_Ownership" name="Car_Ownership" required>
+            <option value="">--Select Ownership--</option>
+            <option value="Yes">yes</option>
+            <option value="No">no</option>
+        </select>
+
+        <label for="Married_Single">Marital Status:</label>
+        <select id="Married_Single" name="Married_Single" required>
+            <option value="">--Select Status--</option>
+            <option value="Married">married</option>
+            <option value="Single">single</option>
+        </select>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+    <h2>Risk Flag: {{ 'Low Risk' if result == 0 else 'High Risk' }}</h2>
+</body>
+</html>
