@@ -19,12 +19,14 @@ list_of_files=[
     f"src/exception.py",
     f"src/logger.py",
     f"src/utils.py",
-    "main.py",
-    "app.py",
+    "application.py",
     "Dockerfile",
     "requirements.txt",
     "setup.py",
     f"Notebooks/Loan_prediction.ipynb",
+    f"templates/home.html",
+    f"static/style.css",
+    f".ebextensions/python.config"
 ]
 
 for filepath in list_of_files:

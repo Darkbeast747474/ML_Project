@@ -5,4 +5,7 @@ seaborn
 flask
 scikit-learn
 matplotlib
+xgboost
+catboost
+flask
 -e .
